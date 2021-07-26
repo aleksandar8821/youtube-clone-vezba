@@ -6,6 +6,9 @@ use yii\bootstrap4\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model common\models\Video */
 /* @var $form yii\bootstrap4\ActiveForm */
+
+\backend\assets\TagsInputAsset::register($this);
+
 ?>
 
 <div class="video-form">
