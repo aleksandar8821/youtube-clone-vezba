@@ -8,6 +8,7 @@
 
 /** @var $model \common\models\Video */
 
+use yii\helpers\Html;
 use \yii\helpers\StringHelper;
 use yii\helpers\Url;
 
@@ -24,6 +25,6 @@ use yii\helpers\Url;
     </a>
     <div class="media-body">
         <h6 class="mt-0"><?php echo $model->title ?></h6>
-        <?php echo StringHelper::truncateWords($model->description, 10) ?>
+        <?php echo Html::encode(StringHelper::truncateWords($model->description, 10)) ?>
     </div>
 </div>
