@@ -209,4 +209,15 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = null;
     }
+
+
+    public function isSubscribed($userId)
+    {
+        // VarDumper::dump($this);
+        return Subscriber::find()->andWhere([
+            'channel_id' => $this->id,
+            'user_id' => $userId
+        ])->one();
+    }
+
 }
